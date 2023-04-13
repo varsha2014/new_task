@@ -1,0 +1,76 @@
+<!-- <div class="Main_wraper">
+    <div class="sub_wrper">
+
+    </div>
+</div> -->
+
+<ng-container *ngIf="AllData">
+    <div class="row">
+
+        <div class="row bg-white p-2 mt-2 shadow" style="width: 100%; margin: auto; display: flex;">
+            <div class="col-md-2">
+                <i style="margin-left: 5px; font-size: 25px;" class="fa fa-arrow-left"></i>
+
+            </div>
+            <div class="col-md-2" style="position: relative; width: 45%; text-align: center;">
+                <p class="category_head pl-4">{{AllData[0].branch_name}}</p>
+            </div>
+            <!-- <div class="row bg-white p-2 mt-2 shadow"> -->
+
+            <div class="col-md-2 pb-1 d-flex justify-content-around" style=" width: 38%">
+
+                <div style="position: relative; text-align: center;">
+                    <p class="category_head pl-4">My Orders</p>
+                </div>
+
+                <i class="fa fa-bitbucket" style="font-size: 25px;"></i>
+
+                <!-- <button class="btn btn btn-secondary pl-3 font-weight-bold"
+                    style="height:28px;width:40px;font-size:11px;"><i class="fa fa-close "></i></button> -->
+            </div>
+
+
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <div>
+        <mat-tab-group>
+            <mat-tab label="{{item.menu_category}}" *ngFor="let item of AllData[0].table_menu_list">
+                <div style="padding-left: 10px; padding-bottom: 30px;" *ngFor="let data of item.category_dishes">
+
+                    <div style="border:1px solid; width: 11px; height: 10px; ">
+                        <div class="main_color_change" style="background-color: #000;">
+
+                        </div>
+                    </div>
+                    <p class="pl-4" style="font-size: 18px;">{{data.dish_name}}</p>
+                    <div style="width: 100%;" class="dish_main_wrp">
+                        <div class="dishes_wrp">
+                            <span>{{data.dish_currency}}
+                                <span style="margin-left: 3px;">{{data.dish_price}}
+                                </span>
+                            </span>
+                            <span style="width: 50%;">
+                                {{data.dish_calories}}
+                                <span>
+                                    calories
+                                </span>
+                            </span>
+                        </div>
+                        <div class="" style="width:38%;">
+                            <div class="imag_main_wrp">
+                                <img [src]="data.dish_image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        {{data.dish_description}}
+                    </div>
+                </div>
+            </mat-tab>
+
+        </mat-tab-group>
+    </div>
+</ng-container>

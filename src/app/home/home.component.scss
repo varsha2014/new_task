@@ -1,0 +1,47 @@
+.Main_wraper {
+    width: 100%;
+    position: relative;
+}
+.sub_wrper {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.category_head {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.main_color_change {
+    border-radius: 66%;
+    width: 7px;
+    height: 7px;
+    margin-left: 1px;
+    margin-top: 1px;
+}
+.veg {
+    background-color: green;
+}
+.nonveg {
+    background-color: red;
+}
+.dish_main_wrp {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    position: relative;
+
+    .dishes_wrp {
+        width: 60%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    .imag_main_wrp {
+        border: 1px solid;
+        width: 70px;
+        height: 70px;
+        float: right;
+        margin-right: 5px;
+    }
+}
